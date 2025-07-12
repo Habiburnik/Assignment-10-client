@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import SocialLogins from './../SocialLogins';
 
 const Login = () => {
     const { userLogin, setUser }= useContext(AuthContext);
@@ -28,6 +29,7 @@ const Login = () => {
     return (
 
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            
             <div className="card-body">
                 <form onSubmit={handleLogin} className="fieldset">
                     <label className="label">Email</label>
@@ -39,6 +41,7 @@ const Login = () => {
                     <label className='py-2'> Don't have an account? <Link to='/auth/register' className='text-red-400 font-bold'>Register</Link></label>
                 </form>
             </div>
+            <SocialLogins></SocialLogins>
         </div>
     );
 };

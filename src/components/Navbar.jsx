@@ -38,7 +38,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='flex gap-2 h-8'>
-                <img className="hidden sm:block" src={userIcon} alt="" />
+                <img className="hidden sm:block rounded-3xl w-8 " src={user ? user.photoURL : userIcon  } alt="" />
                 {
                     user && user?.email ?
                         <button onClick={logOut} className='btn h-8 '>Log Out</button > :

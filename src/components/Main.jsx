@@ -5,6 +5,7 @@ import slider4 from '../assets/slider4.jpg'
 import CountUp from 'react-countup';
 import spain from '../assets/Spain.jpg'
 import learn from '../assets/learn.jpg'
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -41,8 +42,8 @@ const Main = () => {
                         src={slider3}
                         className="w-full" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
+                        <a href="#slide3" className="btn btn-circle">❮</a>
+                        <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
             </div>
@@ -68,12 +69,12 @@ const Main = () => {
                             With bite-sized lessons, themed vocabulary, and engaging quizzes, learning Spanish is now easier, faster, and more fun!
                         </p>
 
-                        <a
-                            href="#start-learning"
+                        <Link
+                            to="/lessons"
                             className="inline-block mt-6 px-6 py-3 bg-red-500 hover:bg-red-600 text-white text-lg font-medium rounded-xl transition"
                         >
                             Start Learning Now
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -119,6 +120,7 @@ const Main = () => {
                     </div>
                 </div>
             </section>
+
             <section className="bg-gray-50 py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800 mb-12">What’s Included in Each Lesson?</h2>
@@ -141,6 +143,7 @@ const Main = () => {
                             <h3 className="text-xl font-semibold mb-2 text-red-500">🧩 Interactive Quizzes</h3>
                             <p className="text-gray-600">Test your skills and earn points with fun quizzes and games.</p>
                         </div>
+
                     </div>
                 </div>
             </section>
