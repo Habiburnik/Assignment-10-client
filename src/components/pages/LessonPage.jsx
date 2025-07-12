@@ -5,9 +5,9 @@ import Loading from './Loading';
 
 
 const difficultyColors = {
-  easy: 'bg-green-100 border-green-300',
-  medium: 'bg-yellow-100 border-yellow-300',
-  hard: 'bg-red-100 border-red-300',
+  easy: 'bg-[#9dc399] border-white ',
+  medium: 'bg-[#dfde98] border-white ',
+  difficult: 'bg-[#dc9589] border-white',
 };
 
 const Lesson = () => {
@@ -75,7 +75,7 @@ const Lesson = () => {
 
             <button
               onClick={() => openModal(word)}
-              className="mt-4 cursor-pointer inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              className="mt-4 cursor-pointer inline-block bg-[#5459AC] hover:bg-[#001c5a] text-white px-4 py-2 rounded  transition"
             >
               When to Say
             </button>
@@ -109,7 +109,7 @@ const Lesson = () => {
       <div className="mt-12 text-center">
         <button
           onClick={goBack}
-          className="bg-gray-700 text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+          className="bg-[#5459AC] cursor-pointer hover:bg-[#001c5a] text-white px-6 py-3 rounded-xl  transition"
         >
           ⬅️ Back to Lessons
         </button>
