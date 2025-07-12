@@ -42,7 +42,7 @@ const Lessons = () => {
           <div
             key={lessonNo}
             onClick={() => handleLessonClick(lessonNo)}
-            className="cursor-pointer p-6 bg-white rounded-xl shadow hover:shadow-lg transition text-center font-medium text-lg text-red-600 hover:bg-red-50"
+            className="cursor-pointer p-6 bg-base-200 rounded-xl shadow hover:shadow-lg transition text-center font-medium text-lg text-red-600 hover:bg-red-50"
           >
             Lesson {lessonNo}
           </div>

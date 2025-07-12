@@ -17,8 +17,8 @@ const Main = () => {
     ];
 
     return (
-        <div>
-            <div className="carousel w-full max-h-[500px]">
+        <div className='bg-white'>
+            <div className="carousel  w-full max-h-[500px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
                         src={slider5}
@@ -60,7 +60,7 @@ const Main = () => {
                     <div>
                         <h2 className="text-3xl font-bold mb-4 text-gray-800">About Lingo Bingo</h2>
                         <p className="text-gray-600 mb-4 text-md leading-relaxed">
-                            Welcome to <span className="font-semibold text-red-500">Lingo Bingo</span> — your fun and interactive way to learn Spanish! Whether you're just starting out or looking to refine your skills, we offer vocabulary games, pronunciation guides, and real-world usage examples to help you master Spanish naturally.
+                            Welcome to <span className="font-semibold text-[#5459AC]">Lingo Bingo</span> — your fun and interactive way to learn Spanish! Whether you're just starting out or looking to refine your skills, we offer vocabulary games, pronunciation guides, and real-world usage examples to help you master Spanish naturally.
                         </p>
                         <p className="text-gray-600 mb-4 text-md leading-relaxed">
                             Our lessons are built around real-life scenarios, so you’ll learn how to speak Spanish the way native speakers actually use it — not just textbook phrases.
@@ -71,7 +71,7 @@ const Main = () => {
 
                         <Link
                             to="/lessons"
-                            className="inline-block mt-6 px-6 py-3 bg-red-500 hover:bg-red-600 text-white text-lg font-medium rounded-xl transition"
+                            className="inline-block mt-6 px-6 py-3 bg-[#5459AC] hover:bg-[#52357B] text-white text-lg font-medium rounded-xl transition"
                         >
                             Start Learning Now
                         </Link>
@@ -87,7 +87,7 @@ const Main = () => {
                                 key={index}
                                 className="bg-white rounded-xl shadow-md p-6 transition hover:shadow-xl"
                             >
-                                <h3 className="text-3xl font-bold text-red-500">
+                                <h3 className="text-3xl font-bold text-[#5459AC]">
                                     <CountUp end={stat.count} duration={5} />
                                 </h3>
                                 <p className="text-gray-600 text-lg mt-2">{stat.title}</p>
@@ -128,19 +128,19 @@ const Main = () => {
                     <div className="grid gap-8 md:grid-cols-3 text-left">
                         {/* Card 1 */}
                         <div className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-red-500">🎧 Native Pronunciations</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🎧 Native Pronunciations</h3>
                             <p className="text-gray-600">Listen and repeat exercises recorded by native speakers.</p>
                         </div>
 
                         {/* Card 2 */}
                         <div className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-red-500">📚 Vocabulary Packs</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">📚 Vocabulary Packs</h3>
                             <p className="text-gray-600">Learn themed word lists with pronunciation and usage tips.</p>
                         </div>
 
                         {/* Card 3 */}
                         <div className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-red-500">🧩 Interactive Quizzes</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🧩 Interactive Quizzes</h3>
                             <p className="text-gray-600">Test your skills and earn points with fun quizzes and games.</p>
                         </div>
 

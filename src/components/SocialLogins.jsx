@@ -22,7 +22,7 @@ const SocialLogins = () => {
 
   return (
     <div className="flex flex-row mx-auto items-center mb-5">
-      <h2 className="text-sm font-bold mx-3">or login with</h2>
+      <h2 className="text-sm font-semibold mx-3">or login with</h2>
       <button onClick={handleGoogleLogin} className="btn flex items-center gap-2">
         <FaGoogle /> Login with Google
       </button>

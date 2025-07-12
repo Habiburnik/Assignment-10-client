@@ -53,9 +53,13 @@ const Lesson = () => {
 
   return (
     <section className="px-6 py-12 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">
-        📘 Lesson {id}
-      </h1>
+      <div className='flex gap-2'>
+        <span className='text-xl mt-1'>📘 </span>
+        <h1 className="text-3xl font-bold mb-8 text-gray-800">
+           Lesson {id}
+        </h1>
+      </div>
+
 
       {/* Word Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -82,9 +86,9 @@ const Lesson = () => {
       {/* Modal */}
       {showModal && selectedWord && (
         <div className="fixed inset-0 bg-white bg-opacity-90 flex justify-center items-center z-50" style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.6)', 
-          backdropFilter: 'blur(3px)',                
-          WebkitBackdropFilter: 'blur(6px)',          
+          backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          backdropFilter: 'blur(3px)',
+          WebkitBackdropFilter: 'blur(6px)',
         }}>
           <div className="bg-white p-6 rounded-xl shadow-lg max-w-md w-full relative">
             <button
