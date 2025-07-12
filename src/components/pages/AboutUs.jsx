@@ -5,7 +5,7 @@ const AboutUs = () => {
 
       <div className="space-y-6 text-lg leading-relaxed">
         <p>
-          Hi, I’m [Your Name], a passionate web developer focused on building modern, user-friendly applications.
+          Hi, I’m Md. Habibur Rahaman, a passionate web developer focused on building modern, user-friendly applications.
           I specialize in React, JavaScript, and front-end technologies.
         </p>
 
