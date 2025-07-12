@@ -9,6 +9,8 @@ import LessonPage from "../components/pages/LessonPage";
 import PrivateRoute from "./PrivateRoute";
 import Tutorial from "../components/pages/Tutorials";
 import AboutUs from "../components/pages/AboutUs";
+import Profile from "../components/pages/Profile";
+import UpdateProfile from './../components/pages/UpdateProfile';
 
 
 const Router = createBrowserRouter([
@@ -42,6 +44,14 @@ const Router = createBrowserRouter([
             {
                 path : '/aboutUs',
                 element : <AboutUs></AboutUs>
+            },
+            {
+                path :'/profile',
+                element: <PrivateRoute> <Profile></Profile> </PrivateRoute>
+            },
+            {
+                path : '/profile/updateProfile',
+                element : <PrivateRoute> <UpdateProfile></UpdateProfile> </PrivateRoute>
             }
 
         ]
