@@ -32,7 +32,7 @@ const Main = () => {
 
     return (
         <div className='bg-white'>
-            <div className="carousel relative z-10 w-full max-h-[700px]">
+            <div className="carousel relative z-10 w-full max-h-[calc(100vh-500px)]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
                         src={slider5}

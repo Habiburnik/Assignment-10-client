@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import userIcon from '../assets/user.png'
 import { AuthContext } from '../provider/AuthProvider';
+import { FiLogIn } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -38,23 +40,47 @@ const Navbar = () => {
                     {subMenu}
                 </ul>
             </div>
-            <div className='flex gap-5 h-8'>
+            <div className='flex h-'>
                 <img
-                    className="hidden sm:block rounded-3xl w-8"
+                    className="hidden sm:block rounded-3xl h-8 mt-2 w-8"
                     src={user?.photoURL || userIcon}
                     alt=""
                     referrerPolicy="no-referrer"
                     crossOrigin="anonymous"
                 />
                 {
+                    user && user?.email ? (
+                        <>
+                            {/* Small screens: just Logout button */}
+                            <div className="flex md:hidden">
+                                <button onClick={logOut} className="btn btn-sm ml-3">
+                                    Logout <FiLogOut />
+                                </button>
+                            </div>
 
-                    user && user?.email ?
-                        <button onClick={logOut} className='btn h-8 border-black bg-[#f1efef] '>Log Out</button > :
-                        <Link to='/auth/login' className='btn h-8' >Login</Link >
+                            {/* Medium+ screens: dropdown with username and logout */}
+                            <div className="hidden md:flex">
+                                <ul className="menu menu-horizontal">
+                                    <li>
+                                        <details>
+                                            <summary>{user.displayName}</summary>
+                                            <ul className="bg-white text-red-500 font-bold rounded-t-none">
+                                                <li>
+                                                    <button onClick={logOut}>Logout</button>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </div>
+                        </>
+                    ) : (
+                        <Link to="/auth/login" className="btn h-8 mt-1.5 ml-3">
+                            <FiLogIn /> Login
+                        </Link>
+                    )
                 }
-                {
 
-                }
 
             </div>
         </div>
