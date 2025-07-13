@@ -4,7 +4,6 @@ import userIcon from '../assets/user.png'
 import { AuthContext } from '../provider/AuthProvider';
 import { FiLogIn } from "react-icons/fi";
 import { FiLogOut } from "react-icons/fi";
-import icon from '../../public/vite.svg'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
