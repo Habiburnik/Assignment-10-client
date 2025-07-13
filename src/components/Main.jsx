@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import slider5 from '../assets/slider5.jpg'
 import slider3 from '../assets/slider3.jpg'
 import slider4 from '../assets/slider4.jpg'
@@ -6,8 +6,22 @@ import CountUp from 'react-countup';
 import spain from '../assets/Spain.jpg'
 import learn from '../assets/learn.jpg'
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 
 const Main = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,  // animation duration
+            once: true       // whether animation should happen only once
+        });
+    }, []);
+
+
 
     const stats = [
         { title: "Users", count: 18245 },
@@ -47,9 +61,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <section className="bg-white py-16 px-4 md:px-10">
+            <section data-aos="fade-up" className="bg-white py-16 px-4 md:px-10">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                    <div>
+                    <div data-aos="flip-left">
                         <img
                             src={learn}
                             alt="Learning Spanish"
@@ -78,12 +92,12 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-gray-100 py-16 px-4">
+            <section data-aos="fade-up" className="bg-gray-100 py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800 mb-10">Our Progress So Far </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, index) => (
-                            <div
+                            <div data-aos="zoom-in"
                                 key={index}
                                 className="bg-white rounded-xl shadow-md p-6 transition hover:shadow-xl"
                             >
@@ -96,7 +110,7 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-white py-16 px-4">
+            <section data-aos="fade-down" className="bg-white py-16 px-4">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                     {/* Text */}
                     <div>
@@ -121,25 +135,26 @@ const Main = () => {
                 </div>
             </section>
 
-            <section className="bg-gray-50 py-16 px-4">
+            <section data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"  className="bg-gray-50 py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800 mb-12">What’s Included in Each Lesson?</h2>
 
                     <div className="grid gap-8 md:grid-cols-3 text-left">
                         {/* Card 1 */}
-                        <div className="bg-white rounded-xl shadow-md p-6">
+                        <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
                             <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🎧 Native Pronunciations</h3>
                             <p className="text-gray-600">Listen and repeat exercises recorded by native speakers.</p>
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-white rounded-xl shadow-md p-6">
+                        <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
                             <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">📚 Vocabulary Packs</h3>
                             <p className="text-gray-600">Learn themed word lists with pronunciation and usage tips.</p>
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-white rounded-xl shadow-md p-6">
+                        <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
                             <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🧩 Interactive Quizzes</h3>
                             <p className="text-gray-600">Test your skills and earn points with fun quizzes and games.</p>
                         </div>
