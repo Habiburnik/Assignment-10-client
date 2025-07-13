@@ -68,7 +68,7 @@ const Lessons = () => {
         <div className="text-center mt-10">
           <button
             onClick={handleViewMore}
-            className="bg-[#5459AC] hover:bg-[#001c5a] text-white px-6 py-3 text-lg rounded-xl transition"
+            className="bg-[#5459AC] hover:bg-[#001c5a] cursor-pointer text-white px-6 py-3 text-lg rounded-xl transition"
           >
             View More Tutorials
           </button>

@@ -53,7 +53,7 @@ const Tutorial = () => {
       <div className="text-center">
         <button
           onClick={handleLearnVocab}
-          className="bg-red-600 text-white px-8 py-3 rounded-xl text-lg font-semibold hover:bg-red-700 transition"
+          className="bg-[#5459AC] cursor-pointer hover:bg-[#001c5a] text-white px-8 py-3 rounded-xl text-lg font-semibold  transition"
         >
           Learn Vocabularies
         </button>

@@ -11,6 +11,7 @@ import Tutorial from "../components/pages/Tutorials";
 import AboutUs from "../components/pages/AboutUs";
 import Profile from "../components/pages/Profile";
 import UpdateProfile from './../components/pages/UpdateProfile';
+import NotFound from './../components/pages/NotFound';
 
 
 const Router = createBrowserRouter([
@@ -73,7 +74,7 @@ const Router = createBrowserRouter([
     },
     {
         path: "*",
-        element: <h1>404 Not Found</h1>,
+        element: <NotFound></NotFound>,
     }
 
 ]);

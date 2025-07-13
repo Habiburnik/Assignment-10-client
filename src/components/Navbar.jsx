@@ -26,11 +26,11 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {subMenu}
                     </ul>
                 </div>
-                <a className="btn btn-ghost">Lingo Bingo</a>
+                <Link to='/' className="btn btn-ghost hover:bg-[#001c5a]  hover:text-white">Lingo Bingo</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
