@@ -6,6 +6,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
 
+
     const subMenu = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/lessons'>Start-learning</Link></li>
@@ -38,11 +39,21 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='flex gap-2 h-8'>
-                <img className="hidden sm:block rounded-3xl w-8 " src={user ? user.photoURL : userIcon  } alt="" />
+                <img
+                    className="hidden sm:block rounded-3xl w-8"
+                    src={user?.photoURL || userIcon}
+                    alt=""
+                    referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
+                />
                 {
+
                     user && user?.email ?
                         <button onClick={logOut} className='btn h-8 '>Log Out</button > :
                         <Link to='/auth/login' className='btn h-8' >Login</Link >
+                }
+                {
+
                 }
 
             </div>

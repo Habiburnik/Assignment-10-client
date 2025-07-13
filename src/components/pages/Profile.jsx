@@ -8,7 +8,6 @@ const Profile = () => {
     const { user } = useContext(AuthContext)
 
 
-
     return (
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-6">
             <div>
@@ -16,7 +15,10 @@ const Profile = () => {
             </div>
             <div className="card-body">
                 <div className="fieldset space-y-2">
-                    <img className='h-50 w-50 rounded-4xl mx-auto mb-5' src={user.photoURL} alt="" />
+                    <img className='h-50 w-50 rounded-4xl mx-auto mb-5'src={user.photoURL}
+                                        alt=""
+                                        referrerPolicy="no-referrer"
+                                        crossOrigin="anonymous" ></img>
                     <div className='flex justify-between'>
                         <label className="label">Name : </label> <span>{user.displayName}</span>
                     </div>

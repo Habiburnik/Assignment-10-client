@@ -36,7 +36,7 @@ const Login = () => {
                     <input type="email" name="email" className="input" placeholder="Email" />
                     <label className="label">Password</label>
                     <input type="password" name = "password" className="input" placeholder="Password" />
-                    <div><a className="link link-hover">Forgot password?</a></div>
+                    <div><Link to='/auth/forget-password' className="link link-hover">Forgot password?</Link></div>
                     <button className="btn btn-neutral mt-4">Login</button>
                     <label className='py-2'> Don't have an account? <Link to='/auth/register' className='text-red-400 font-bold'>Register</Link></label>
                 </form>
