@@ -31,19 +31,21 @@ const UpdateProfile = () => {
     };
 
     return (
-        <div className="card bg-base-100 mx-auto mt-6 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body">
-                <form onSubmit={handleSubmit} className="fieldset">
-                    <label className="label">Name</label>
-                    <input type="text" name="name" className="input input-bordered w-full" placeholder="Name" />
+        <div className='pt-25'>
+            <div className="card bg-base-100 mx-auto pt-2 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card-body">
+                    <form onSubmit={handleSubmit} className="fieldset">
+                        <label className="label">Name</label>
+                        <input type="text" name="name" className="input input-bordered w-full" placeholder="Name" />
 
-                    <label className="label mt-2">Photo URL</label>
-                    <input type="text" name="photo" className="input input-bordered w-full" placeholder="Photo URL" />
+                        <label className="label mt-2">Photo URL</label>
+                        <input type="text" name="photo" className="input input-bordered w-full" placeholder="Photo URL" />
 
-                    <button type="submit" className="btn btn-neutral mt-4">
-                        Update Information
-                    </button>
-                </form>
+                        <button type="submit" className="btn btn-neutral mt-4">
+                            Update Information
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     );

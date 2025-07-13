@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../provider/AuthProvider';
-import Loading from './Loading';
+import { HiMiniSpeakerWave } from "react-icons/hi2";
+import { toast } from 'react-toastify';
 
 
 const difficultyColors = {
@@ -18,6 +18,25 @@ const Lesson = () => {
   const [vocabList, setVocabList] = useState([]);
   const [selectedWord, setSelectedWord] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  const speakSpanish = (text) => {
+    const synth = window.speechSynthesis;
+    const voices = synth.getVoices();
+
+    // Get a Spanish voice
+    const spanishVoice = voices.find(voice => voice.lang.startsWith('es'));
+
+    if (!spanishVoice) {
+      toast.error("Spanish voice not available on this device.");
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = spanishVoice;
+    utterance.lang = 'es-ES';
+    synth.speak(utterance);
+  };
+
 
 
   useEffect(() => {
@@ -52,11 +71,11 @@ const Lesson = () => {
 
 
   return (
-    <section className="px-6 py-12 max-w-6xl mx-auto">
+    <section className="px-6 py-12 pt-25 max-w-6xl mx-auto">
       <div className='flex gap-2'>
         <span className='text-xl mt-1'>📘 </span>
         <h1 className="text-3xl font-bold mb-8 text-gray-800">
-           Lesson {id}
+          Lesson {id}
         </h1>
       </div>
 
@@ -68,7 +87,7 @@ const Lesson = () => {
             key={word.id}
             className={`border p-4 rounded-xl shadow-sm ${difficultyColors[word.difficulty] || 'bg-gray-100'}`}
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">{word.word}</h2>
+            <h2 className="flex justify-between text-xl font-semibold text-gray-800 mb-2">{word.word} <button onClick={() => speakSpanish(word.word)} className='cursor-pointer'><HiMiniSpeakerWave /></button></h2>
             <p className="text-gray-600"><strong>Meaning:</strong> {word.meaning}</p>
             <p className="text-gray-600"><strong>Pronunciation:</strong> {word.pronunciation}</p>
             <p className="text-gray-600"><strong>Part of Speech:</strong> {word.part_of_speech}</p>

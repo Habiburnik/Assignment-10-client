@@ -31,7 +31,7 @@ const Tutorial = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12">
+    <section className="max-w-7xl pt-25 mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold mb-10 text-center text-gray-800">
         🎥 Spanish Tutorials
       </h1>

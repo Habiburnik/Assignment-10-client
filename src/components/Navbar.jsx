@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-[#001c5a] text-white shadow-sm flex justify-between text-xl lg:text-xl">
+        <div className="navbar bg-[#001c5a] text-white shadow-sm flex justify-between text-3xl lg:text-2xl">
             <div className="navbar-start max-w-[150px]">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,14 +31,14 @@ const Navbar = () => {
                         {subMenu}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost hover:bg-[#001c5a]  hover:text-white">Lingo Bingo</Link>
+                <Link to='/' className="btn btn-ghost hover:bg-[#001c5a] text-2xl hover:text-white">Lingo Bingo</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu text-lg menu-horizontal px-1">
                     {subMenu}
                 </ul>
             </div>
-            <div className='flex gap-2 h-8'>
+            <div className='flex gap-5 h-8'>
                 <img
                     className="hidden sm:block rounded-3xl w-8"
                     src={user?.photoURL || userIcon}
@@ -49,7 +49,7 @@ const Navbar = () => {
                 {
 
                     user && user?.email ?
-                        <button onClick={logOut} className='btn h-8 '>Log Out</button > :
+                        <button onClick={logOut} className='btn h-8 border-black bg-[#f1efef] '>Log Out</button > :
                         <Link to='/auth/login' className='btn h-8' >Login</Link >
                 }
                 {

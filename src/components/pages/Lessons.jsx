@@ -30,7 +30,7 @@ const Lessons = () => {
   } else
 
     return (
-      <section className="py-16 px-4 max-w-6xl mx-auto">
+      <section className="py-16 pt-25 px-4 max-w-6xl mx-auto">
         {/* Page Title */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Let’s Learn Spanish

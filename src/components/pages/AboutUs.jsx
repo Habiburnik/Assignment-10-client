@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12 text-gray-800">
+    <section className="max-w-4xl pt-25 mx-auto px-6 py-12 text-gray-800">
       <h1 className="text-4xl font-bold mb-8 text-center">About Us</h1>
 
       <div className="space-y-6 text-lg leading-relaxed">

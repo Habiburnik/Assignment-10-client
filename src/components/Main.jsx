@@ -32,7 +32,7 @@ const Main = () => {
 
     return (
         <div className='bg-white'>
-            <div className="carousel  w-full max-h-[500px]">
+            <div className="carousel relative z-10 w-full max-h-[700px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
                         src={slider5}
@@ -135,33 +135,80 @@ const Main = () => {
                 </div>
             </section>
 
-            <section data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom"  className="bg-gray-50 py-16 px-4">
+            <section
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+                className="bg-gray-50 py-16 px-4"
+            >
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-gray-800 mb-12">What’s Included in Each Lesson?</h2>
+                    <h2 className="text-4xl font-bold text-gray-800 mb-12">
+                        What’s Included in Each Lesson?
+                    </h2>
 
-                    <div className="grid gap-8 md:grid-cols-3 text-left">
+                    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-left">
                         {/* Card 1 */}
                         <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🎧 Native Pronunciations</h3>
-                            <p className="text-gray-600">Listen and repeat exercises recorded by native speakers.</p>
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                🎧 Native Pronunciations
+                            </h3>
+                            <p className="text-gray-600">
+                                Listen and repeat exercises recorded by native speakers.
+                            </p>
                         </div>
 
                         {/* Card 2 */}
-                        <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">📚 Vocabulary Packs</h3>
-                            <p className="text-gray-600">Learn themed word lists with pronunciation and usage tips.</p>
+                        <div data-aos="flip-right" className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                📚 Vocabulary Packs
+                            </h3>
+                            <p className="text-gray-600">
+                                Learn themed word lists with pronunciation and usage tips.
+                            </p>
                         </div>
 
                         {/* Card 3 */}
-                        <div data-aos="flip-left" className="bg-white rounded-xl shadow-md p-6">
-                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">🧩 Interactive Quizzes</h3>
-                            <p className="text-gray-600">Test your skills and earn points with fun quizzes and games.</p>
+                        <div data-aos="flip-up" className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                🧩 Interactive Quizzes
+                            </h3>
+                            <p className="text-gray-600">
+                                Test your skills and earn points with fun quizzes and games.
+                            </p>
                         </div>
 
+                        {/* Card 4 */}
+                        <div data-aos="zoom-in" className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                🎬 Video Lessons
+                            </h3>
+                            <p className="text-gray-600">
+                                Watch engaging videos that teach grammar and conversation.
+                            </p>
+                        </div>
+
+                        {/* Card 5 */}
+                        <div data-aos="fade-up" className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                📝 Writing Practice
+                            </h3>
+                            <p className="text-gray-600">
+                                Improve your writing with guided exercises and feedback.
+                            </p>
+                        </div>
+
+                        {/* Card 6 */}
+                        <div data-aos="fade-down" className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-xl font-semibold mb-2 text-[#5459AC]">
+                                🗣️ Speaking Challenges
+                            </h3>
+                            <p className="text-gray-600">
+                                Participate in real-time speaking activities and get evaluated.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
+
 
 
 
