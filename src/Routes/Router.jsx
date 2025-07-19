@@ -7,6 +7,8 @@ import Main from "../components/Main";
 import AboutUs from "../components/pages/AboutUs";
 import NotFound from './../components/pages/NotFound';
 import ForgetPassword from "../components/pages/ForgetPassword";
+import AddVisa from "../components/pages/AddVisas";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -21,6 +23,10 @@ const Router = createBrowserRouter([
             {
                 path : '/aboutUs',
                 element : <AboutUs></AboutUs>
+            },
+             {
+                path: "/addvisa",
+                element: <PrivateRoute> <AddVisa></AddVisa> </PrivateRoute>
             }
 
         ]

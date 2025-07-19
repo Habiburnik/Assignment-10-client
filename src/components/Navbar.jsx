@@ -11,8 +11,8 @@ const Navbar = () => {
 
     const subMenu = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/lessons'>All visas</Link></li>
-        <li><Link to='/tutorials'>Add Visa</Link></li>
+        <li><Link to='/visas'>All visas</Link></li>
+        <li><Link to='/addVisa'>Add Visa</Link></li>
         <li><Link to='/aboutUs'>My Visa applications</Link></li>
     </>
 
