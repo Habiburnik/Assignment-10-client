@@ -11,18 +11,15 @@ const Navbar = () => {
 
     const subMenu = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/lessons'>Start-learning</Link></li>
-        <li><Link to='/tutorials'>Tutorials</Link></li>
-        <li><Link to='/aboutUs'>About-us</Link></li>
-        {
-            user && <li><Link to='/Profile'>My Profile</Link></li>
-        }
+        <li><Link to='/lessons'>All visas</Link></li>
+        <li><Link to='/tutorials'>Add Visa</Link></li>
+        <li><Link to='/aboutUs'>My Visa applications</Link></li>
     </>
 
 
     return (
-        <div className="navbar bg-[#001c5a] text-white shadow-sm flex justify-between text-3xl lg:text-2xl">
-            <div className="navbar-start max-w-[150px]">
+        <div className="navbar bg-base-200 text-black shadow-sm flex justify-between text-3xl lg:text-2xl">
+            <div className="navbar-start max-w-[200px]">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
@@ -33,7 +30,9 @@ const Navbar = () => {
                         {subMenu}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost hover:bg-[#001c5a] text-2xl hover:text-white">Lingo Bingo</Link>
+                <Link to='/' className="btn  btn-ghost hover:bg-base-400 text-2xl hover:text-black">
+                    <span className='text-lg'> Visa Vista </span>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-lg menu-horizontal px-1">
