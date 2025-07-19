@@ -9,6 +9,8 @@ import NotFound from './../components/pages/NotFound';
 import ForgetPassword from "../components/pages/ForgetPassword";
 import AddVisa from "../components/pages/AddVisas";
 import PrivateRoute from "./PrivateRoute";
+import AllVisas from "../components/pages/AllVisas";
+import VisaDetails from './../components/pages/VisaDetails';
 
 
 const Router = createBrowserRouter([
@@ -21,12 +23,20 @@ const Router = createBrowserRouter([
                 element: <Main></Main>
             },
             {
-                path : '/aboutUs',
-                element : <AboutUs></AboutUs>
+                path: '/aboutUs',
+                element: <AboutUs></AboutUs>
             },
-             {
+            {
                 path: "/addvisa",
                 element: <PrivateRoute> <AddVisa></AddVisa> </PrivateRoute>
+            },
+            {
+                path: "/visas",
+                element: <AllVisas></AllVisas>
+            },
+            {
+                path: "/visa/:id",
+                element: <PrivateRoute> <VisaDetails></VisaDetails> </PrivateRoute>
             }
 
         ]
@@ -44,8 +54,8 @@ const Router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path : '/auth/forget-password',
-                element : <ForgetPassword></ForgetPassword>
+                path: '/auth/forget-password',
+                element: <ForgetPassword></ForgetPassword>
             }
 
         ]
