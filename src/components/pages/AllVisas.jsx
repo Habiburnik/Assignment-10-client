@@ -3,18 +3,53 @@ import { Link } from 'react-router-dom';
 
 const AllVisas = () => {
     const [visas, setVisas] = useState([]);
+    const [filteredVisas, setFilteredVisas] = useState([]);
+    const [selectedType, setSelectedType] = useState('All');
 
     useEffect(() => {
-        fetch('http://localhost:5001/visa') // replace with your actual backend URL
+        fetch('http://localhost:5001/visa') // Replace with your actual backend URL
             .then(res => res.json())
-            .then(data => setVisas(data));
+            .then(data => {
+                setVisas(data);
+                setFilteredVisas(data);
+            });
     }, []);
 
+    // Extract unique visa types for dropdown
+    const visaTypes = ['All', ...new Set(visas.map(v => v.visa_type))];
+
+    const handleFilterChange = (e) => {
+        const type = e.target.value;
+        setSelectedType(type);
+        if (type === 'All') {
+            setFilteredVisas(visas);
+        } else {
+            const filtered = visas.filter(v => v.visa_type === type);
+            setFilteredVisas(filtered);
+        }
+    };
+
     return (
-        <div className=" md:p-16">
-            <h2 className="pt-8 text-4xl font-bold text-center mb-10">All Visas</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {visas.map(visa => (
+        <div className="p-8 sm:p-16 flex flex-col">
+            <div className='flex flex-col sm:flex-row items-center justify-between'>
+                <h2></h2>
+                <h2 className="text-2xl font-bold text-center mb-10 pt-12 sm:pt-8">All Visas</h2>
+                <div className="w-48  flex justify-end">
+                    <select
+                        value={selectedType}
+                        onChange={handleFilterChange}
+                        className="select select-bordered w-full max-w-xs"
+                    >
+                        {visaTypes.map((type, idx) => (
+                            <option key={idx} value={type}>{type}</option>
+                        ))}
+                    </select>
+                </div>
+            </div>
+
+            {/* Visa Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 pt-5 lg:grid-cols-4 gap-8">
+                {filteredVisas.map(visa => (
                     <div
                         key={visa._id}
                         className="bg-base-100 border rounded-lg overflow-hidden shadow hover:shadow-lg transition"

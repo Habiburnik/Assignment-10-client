@@ -1,8 +1,35 @@
 import 'aos/dist/aos.css';
+import LatestVisa from './pages/LatestVisa';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 
 const Main = () => {
-
+    useEffect(() => {
+        AOS.init({
+            duration: 3000,
+            once: false,
+        });
+    }, []);
+    const navigate = useNavigate();
+    const destinations = [
+        {
+            country: "Japan",
+            image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFwYW58ZW58MHx8MHx8fDA%3D",
+            quote: "Discover tradition and technology in harmony.",
+        },
+        {
+            country: "Canada",
+            image: "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbmFkYXxlbnwwfHwwfHx8MA%3D%3D",
+            quote: "Live among nature’s wonders and city skylines.",
+        },
+        {
+            country: "Australia",
+            image: "https://images.unsplash.com/photo-1493375366763-3ed5e0e6d8ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF1c3RyYWxpYXxlbnwwfHwwfHx8MA%3D%3D",
+            quote: "Where every meal is a masterpiece and every street tells a story.",
+        },
+    ];
 
     return (
         <div className='pt-[40px]'>
@@ -69,6 +96,58 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <LatestVisa></LatestVisa>
+            <section data-aos="fade-up" className="mt-7 bg-base-200 py-16 px-6">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold mb-6">Why Choose VisaVista?</h2>
+                    <p className="mb-12 text-lg text-gray-600">
+                        We make your visa journey easy, fast, and reliable with the best services in the industry.
+                    </p>
+
+                    <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
+                        <div data-aos="flip-left" className="bg-white p-6 rounded-lg shadow">
+                            <h4 className="font-semibold text-xl mb-2">Expert Guidance</h4>
+                            <p className="text-gray-600">Our experts help you choose the right visa with step-by-step support.</p>
+                        </div>
+                        <div data-aos="flip-left" className="bg-white p-6 rounded-lg shadow">
+                            <h4 className="font-semibold text-xl mb-2">Fast Processing</h4>
+                            <p className="text-gray-600">We ensure fast and efficient processing for quicker results.</p>
+                        </div>
+                        <div data-aos="flip-left" className="bg-white p-6 rounded-lg shadow">
+                            <h4 className="font-semibold text-xl mb-2">Secure & Transparent</h4>
+                            <p className="text-gray-600">Your data is safe with us, and we keep everything transparent.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-aos="flip-up" className="py-20 bg-gradient-to-b from-base-100 to-base-200">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold"> Dream Destinations Await</h2>
+                    <p className="text-lg text-gray-600 mt-2">Find the perfect visa to explore the places you've always dreamed of.</p>
+                </div>
+
+                <div  className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto">
+                    {destinations.map((dest) => (
+                        <div
+                            key={dest.country} 
+                            className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+                        >
+                            <img src={dest.image} className="w-full h-64 " />
+                            <div className="absolute inset-0  bg-opacity-40 flex flex-col justify-end p-6 text-white">
+                                <h3 className="text-2xl font-bold">{dest.country}</h3>
+                                <p className="text-sm italic">{`"${dest.quote}"`}</p>
+                                <button
+                                    onClick={() => navigate('/visas')}
+                                    className="mt-4 btn btn-sm btn-primary w-fit"
+                                >
+                                    Explore Visas
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+
+                </div>
+            </section>
         </div >
     );
 };

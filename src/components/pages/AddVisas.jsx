@@ -1,16 +1,17 @@
 
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../provider/AuthProvider';
+import { useContext } from 'react';
 
 const AddVisa = () => {
+    const { user } = useContext(AuthContext);
+
     const handleAddVisa = e => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
 
-        // Required_documents will be an array since multiple checkboxes
         const requiredDocuments = formData.getAll('required_documents');
-
-        // Build visa object explicitly to control the structure
         const newVisa = {
             country_image: formData.get('country_image'),
             country_name: formData.get('country_name'),
@@ -22,11 +23,13 @@ const AddVisa = () => {
             fee: Number(formData.get('fee')),
             validity: formData.get('validity'),
             application_method: formData.get('application_method'),
+            createdAt: new Date().toISOString(),
+            added_by : user.email
         };
 
         console.log(newVisa);
 
-        fetch('http://localhost:5001/visa', {  // Change URL as needed
+        fetch('http://localhost:5001/visa', {  
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
