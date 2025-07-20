@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllVisas from "../components/pages/AllVisas";
 import VisaDetails from './../components/pages/VisaDetails';
 import MyApplications from "../components/pages/MyApplications";
+import MyAddedVisas from "../components/pages/MyAddedVisas";
 
 
 const Router = createBrowserRouter([
@@ -42,6 +43,10 @@ const Router = createBrowserRouter([
             {
                 path : "/myApplications",
                 element : <PrivateRoute> <MyApplications></MyApplications> </PrivateRoute>
+            },
+              {
+                path : "/myAddedVisa",
+                element : <PrivateRoute> <MyAddedVisas></MyAddedVisas> </PrivateRoute>
             }
 
         ]
