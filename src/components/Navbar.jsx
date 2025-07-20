@@ -13,7 +13,8 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/visas'>All visas</Link></li>
         <li><Link to='/addVisa'>Add Visa</Link></li>
-        <li><Link to='/aboutUs'>My Visa applications</Link></li>
+        <li><Link to='/myAddedVisa'>My Added Visa</Link></li>
+        <li><Link to='/myApplications'>My Visa applications</Link></li>
     </>
 
 

@@ -23,11 +23,18 @@ const VisaDetails = () => {
             firstName: form.firstName.value,
             lastName: form.lastName.value,
             appliedDate: new Date().toISOString(),
-            visaFee: visa.fee,
+
+            // From visa object
             visaId: visa._id,
-            visaTitle: visa.title,
-            visaCountry: visa.country,
+            visaCountry: visa.country_name,
+            countryImage: visa.country_image,
+            visaType: visa.visa_type,
+            processingTime: visa.processing_time,
+            fee: visa.fee,
+            validity: visa.validity,
+            applicationMethod: visa.application_method
         };
+
 
         const res = await fetch('http://localhost:5001/applications', {
             method: 'POST',
