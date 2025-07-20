@@ -9,6 +9,8 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
 
 
+
+
     const subMenu = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/visas'>All visas</Link></li>
@@ -31,7 +33,7 @@ const Navbar = () => {
                         {subMenu}
                     </ul>
                 </div>
-                <Link to='/' className="btn  btn-ghost hover:bg-base-400 text-2xl hover:text-black">
+                <Link to='/' className="btn btn-ghost hover:bg-base-400 text-2xl">
                     <span className='text-lg'> Visa Vista </span>
                 </Link>
             </div>

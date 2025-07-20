@@ -55,8 +55,7 @@ const VisaDetails = () => {
 
     return (
         <div className="pt-20 max-w-4xl mx-auto p-6">
-            <img src={visa.photo} className="rounded-lg w-full max-h-[400px] object-cover mb-6" />
-            <h2 className="text-3xl font-bold mb-2">{visa.title}</h2>
+            <img src={visa.country_image} className="rounded-lg w-full max-h-[400px] object-cover mb-6" />
             <p><strong>Country:</strong> {visa.country_name}</p>
             <p><strong>Description:</strong> {visa.description}</p>
             <p><strong>Fee:</strong> ${visa.fee}</p>

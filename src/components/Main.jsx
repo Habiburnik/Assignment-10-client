@@ -3,9 +3,12 @@ import LatestVisa from './pages/LatestVisa';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import AOS from 'aos';
-
+import { Typewriter } from 'react-simple-typewriter';
+import { Fade } from 'react-awesome-reveal';
 
 const Main = () => {
+
+
     useEffect(() => {
         AOS.init({
             duration: 3000,
@@ -33,6 +36,7 @@ const Main = () => {
 
     return (
         <div className='pt-[40px]'>
+
             <div className="carousel max-h-[500px] w-ful">
                 <div id="slide1" className="carousel-item relative  w-full">
                     <img
@@ -40,8 +44,18 @@ const Main = () => {
                         className="w-full" />
                     <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black/40 text-white text-3xl font-bold">
                         <div className="flex flex-col items-center text-white text-center space-y-2">
-                            <p className="text-2xl font-bold">Your Journey Starts Here</p>
-                            <p className="text-lg">Navigate global visas with ease on VisaVista.</p>
+                            <p>Your Journey Starts Here</p>
+                            <p className="text-2xl font-bold">
+                                <Typewriter
+                                    words={['Explore the World', 'Discover New Cultures']}
+                                    loop={0}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </p>
                         </div>
                     </div>
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -96,7 +110,12 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <LatestVisa></LatestVisa>
+            <Fade direction="up"
+                duration={1200} // 1.2 seconds for animation
+                delay={200}     // Starts 200ms later
+                triggerOnce={true} cascade>
+                <LatestVisa></LatestVisa>
+            </Fade>
             <section data-aos="fade-up" className="mt-7 bg-base-200 py-16 px-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-6">Why Choose VisaVista?</h2>
@@ -126,10 +145,10 @@ const Main = () => {
                     <p className="text-lg text-gray-600 mt-2">Find the perfect visa to explore the places you've always dreamed of.</p>
                 </div>
 
-                <div  className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto">
                     {destinations.map((dest) => (
                         <div
-                            key={dest.country} 
+                            key={dest.country}
                             className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
                         >
                             <img src={dest.image} className="w-full h-64 " />

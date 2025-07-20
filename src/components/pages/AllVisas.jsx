@@ -57,7 +57,7 @@ const AllVisas = () => {
                         <img
                             src={visa.country_image}
                             alt={visa.country_name}
-                            className="w-full h-48 object-cover"
+                            className="w-full p-3 rounded-2xl h-48 object-cover"
                         />
                         <div className="p-4 space-y-2">
                             <h3 className="text-xl font-semibold">{visa.country_name}</h3>
@@ -68,9 +68,10 @@ const AllVisas = () => {
                             <p><span className="font-medium">Apply:</span> {visa.application_method}</p>
                             <Link
                                 to={`/visa/${visa._id}`}
-                                className="inline-block mt-4 btn btn-primary w-full"
+                                className="inline-block mt-4 pt-2 btn btn-primary w-full"
                             >
                                 See Details
+                                
                             </Link>
                         </div>
                     </div>
