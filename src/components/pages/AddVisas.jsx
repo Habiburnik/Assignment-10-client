@@ -55,7 +55,7 @@ const AddVisa = () => {
 
     return (
         <div className='pt-25 max-w-4xl mx-auto px-5 '>
-            <h1 className='text-4xl font-bold mb-6 text-center'>Add Visa</h1>
+            <h1 className='text-2xl font-bold mb-6 text-center'>Add Visa</h1>
             <form onSubmit={handleAddVisa} className='space-y-6'>
 
                 {/* 2-per-row grid */}
