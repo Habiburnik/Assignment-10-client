@@ -10,7 +10,7 @@ const VisaDetails = () => {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/visa/${id}`)
+        fetch(`https://assignment-10-server-phi-red.vercel.app/visa/${id}`)
             .then(res => res.json())
             .then(data => setVisa(data));
     }, [id]);
@@ -36,7 +36,7 @@ const VisaDetails = () => {
         };
 
 
-        const res = await fetch('https://assignment-10-server-cqj0y7zql.vercel.app/applications', {
+        const res = await fetch('https://assignment-10-server-phi-red.vercel.app/applications', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

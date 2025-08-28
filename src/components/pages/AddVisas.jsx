@@ -29,7 +29,7 @@ const AddVisa = () => {
 
         console.log(newVisa);
 
-        fetch('https://assignment-10-server-cqj0y7zql.vercel.app/visa', {  
+        fetch('https://assignment-10-server-phi-red.vercel.app/visa', {  
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

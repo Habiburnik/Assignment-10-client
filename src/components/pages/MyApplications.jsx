@@ -10,7 +10,7 @@ const MyApplications = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/applications?email=${user.email}`)
+      fetch(`https://assignment-10-server-phi-red.vercel.app/applications?email=${user.email}`)
         .then(res => res.json())
         .then(data => {
           setApplications(data);
@@ -28,7 +28,7 @@ const MyApplications = () => {
       confirmButtonText: 'Yes, cancel it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/applications/${id}`, {
+        fetch(`https://assignment-10-server-phi-red.vercel.app/applications/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
