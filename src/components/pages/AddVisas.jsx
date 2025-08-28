@@ -1,7 +1,7 @@
 
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../provider/AuthProvider';
 import { useContext } from 'react';
+import AuthContext from '../../provider/AuthContext';
 
 const AddVisa = () => {
     const { user } = useContext(AuthContext);

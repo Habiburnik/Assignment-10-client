@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../provider/AuthProvider';
+import AuthContext from '../../provider/AuthContext';
 
 const MyAddedVisas = () => {
     const { user } = useContext(AuthContext);

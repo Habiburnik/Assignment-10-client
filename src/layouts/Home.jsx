@@ -3,8 +3,8 @@ import Navbar from './../components/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from './../components/Footer';
 import { useContext } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
 import Loading from './../components/pages/Loading';
+import AuthContext from '../provider/AuthContext';
 
 const Home = () => {
     const { loading } = useContext(AuthContext)

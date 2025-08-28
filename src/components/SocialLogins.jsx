@@ -2,7 +2,7 @@ import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AuthContext } from "../provider/AuthProvider";
+import AuthContext from "../provider/AuthContext";
 
 const SocialLogins = () => {
   const { signInWithGoogle } = useContext(AuthContext);

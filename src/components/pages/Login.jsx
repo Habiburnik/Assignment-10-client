@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../provider/AuthProvider';
 import SocialLogins from './../SocialLogins';
+import AuthContext from '../../provider/AuthContext';
 
 const Login = () => {
     const { userLogin, setUser }= useContext(AuthContext);

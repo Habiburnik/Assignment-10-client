@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../provider/AuthProvider';
-import { toast } from 'react-toastify'; // make sure it's installed
+import { toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';
+import AuthContext from '../../provider/AuthContext';
 
 const ForgetPassword = () => {
     const { passwordReset } = useContext(AuthContext);

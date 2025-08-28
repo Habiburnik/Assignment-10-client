@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import { AuthContext } from './../../provider/AuthProvider';
+import AuthContext from '../../provider/AuthContext';
 
 const VisaDetails = () => {
     const { id } = useParams();
