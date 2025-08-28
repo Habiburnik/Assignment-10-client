@@ -5,7 +5,7 @@ const LatestVisa = () => {
     const [latestVisas, setLatestVisas] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5001/visa')
+        fetch('https://assignment-10-server-cqj0y7zql.vercel.app/visa')
             .then(res => res.json())
             .then(data => {
                 // Sort by createdAt in descending order

@@ -7,7 +7,7 @@ const AllVisas = () => {
     const [selectedType, setSelectedType] = useState('All');
 
     useEffect(() => {
-        fetch('http://localhost:5001/visa') // Replace with your actual backend URL
+        fetch('https://assignment-10-server-cqj0y7zql.vercel.app/visa') // Replace with your actual backend URL
             .then(res => res.json())
             .then(data => {
                 setVisas(data);

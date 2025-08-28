@@ -8,7 +8,7 @@ const MyAddedVisas = () => {
     const [editingVisa, setEditingVisa] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5001/my-visas?added_by=${user.email}`)
+        fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/my-visas?added_by=${user.email}`)
             .then(res => res.json())
             .then(data => setVisas(data));
     }, [user.email]);
@@ -22,7 +22,7 @@ const MyAddedVisas = () => {
             confirmButtonText: 'Yes, delete it!',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5001/visa/${id}`, {
+                fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/visa/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -53,7 +53,7 @@ const MyAddedVisas = () => {
         // console.log(visas);
         // console.log(editingVisa._id);
 
-        fetch(`http://localhost:5001/visa/${editingVisa._id}`, {
+        fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/visa/${editingVisa._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -65,7 +65,7 @@ const MyAddedVisas = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire('Updated!', 'Visa has been updated.', 'success');
                     setEditingVisa(null);
-                    fetch(`http://localhost:5001/my-visas?added_by=${user.email}`)
+                    fetch(`https://assignment-10-server-cqj0y7zql.vercel.app/my-visas?added_by=${user.email}`)
                         .then(res => res.json())
                         .then(data => setVisas(data));
                 }
